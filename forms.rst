@@ -31,8 +31,8 @@ going to need to build a form. But before you begin, first focus on the generic
 
     class Task
     {
-        protected $task;
-        protected $dueDate;
+        private $task;
+        private $dueDate;
 
         public function getTask()
         {
@@ -326,13 +326,13 @@ object.
             /**
              * @Assert\NotBlank()
              */
-            public $task;
+            private $task;
 
             /**
              * @Assert\NotBlank()
              * @Assert\Type("\DateTime")
              */
-            protected $dueDate;
+            private $dueDate;
         }
 
     .. code-block:: yaml
